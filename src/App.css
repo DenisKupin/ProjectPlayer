@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?qtga8');
+    src: url('fonts/icomoon.eot?qtga8#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?qtga8') format('truetype'), url('fonts/icomoon.woff?qtga8') format('woff'), url('fonts/icomoon.svg?qtga8#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon-download:before {
+    content: "\e960";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.icon-search:before {
+    content: "\e986";
 }
 
-.App-link {
-  color: #61dafb;
+.icon-star-full:before {
+    content: "\e9d9";
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-heart:before {
+    content: "\e9da";
+}
+
+.icon-plus:before {
+    content: "\ea0a";
+}
+
+.icon-minus:before {
+    content: "\ea0b";
+}
+
+.icon-play3:before {
+    content: "\ea1c";
+}
+
+.icon-pause2:before {
+    content: "\ea1d";
+}
+
+.icon-stop2:before {
+    content: "\ea1e";
+}
+
+.icon-first:before {
+    content: "\ea21";
+}
+
+.icon-last:before {
+    content: "\ea22";
+}
+
+.icon-volume-high:before {
+    content: "\ea26";
+}
+
+.icon-volume-medium:before {
+    content: "\ea27";
+}
+
+.icon-volume-low:before {
+    content: "\ea28";
+}
+
+.icon-volume-mute:before {
+    content: "\ea29";
+}
+
+.icon-volume-mute2:before {
+    content: "\ea2a";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-color: lightgray;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.header {
+    background-color: royalblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: 100px;
+    padding: 15px
+}
+
+.mainLink {
+    text-decoration: none;
+    color: white;
+}
+
+.searchWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.search {
+    height: 50px;
+    font-size: large;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 10px;
+    width: 100%;
+}
+
+.searchButton {
+    border-radius: 5px;
+    font-size: large;
+    height: 50px;
+    font-size: larger;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: salmon;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.menu {
+    background-color: white;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.favourite {
+    text-decoration: none;
+    color: white;
+    background-color: salmon;
+    padding: 15px;
+    font-size: larger;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.menuElement {
+    background-color: royalblue;
+    list-style-type: none;
+    color: white;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 5px;
+    font-size: larger;
+    text-transform: uppercase;
+    padding: 5px 0px;
+    text-decoration: none;
+}
+
+.info {
+    border: 1px dotted;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    padding: 5px;
+    font-size: small;
+}
+
+.trackList {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player {
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    font-size: 35px;
+    position: fixed;
+    transform: translateY(1240%);
+    color: white;
+}
+
+.volume {
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 10px;
+    width: 130px;
+    height: 40%;
+}
+
+.play {
+    font-size: 50px;
+    margin: 0px 20px;
+}
+
+.track {
+    width: 35%;
+    background-color: navy;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 30px;
+    height: 60%;
 }
